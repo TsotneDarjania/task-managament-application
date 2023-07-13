@@ -1,0 +1,40 @@
+Tech Stack
+
+1.NextJS
+2.tailwind
+3.ContextAPI
+4.Mobx-state-tree
+
+How to Run a project
+
+On Terminal
+
+1.yarn install
+2.yarn run dev
+
+
+Project Explanantion Below
+
+1.The application uses Next.js, a React framework, to create a server-rendered React application.
+
+2.The application consists of multiple components, including the Home page, Form component, TaskListing component, and Tasks component.
+
+3.The TaskStore component defines the MobX state tree model for managing tasks. It includes actions to add, edit, and delete tasks, as well as functions to store and load tasks from the browser's local storage.
+
+4.The Home page component is the main component that wraps the application's content. It provides the ChakraProvider to apply the Chakra UI theme and styling to the components.
+
+5.The Home page component uses the useLocalObservable hook from MobX to create an observable store instance, which is then provided to the storeContext using the storeContext.Provider.
+
+6.The Form component allows users to add new tasks. It includes a form with input fields for the task's title, description, and status. When the user submits the form, a new task is created using the Task model and added to the taskStore using the addTask action.
+
+7.The TaskListing component displays the list of tasks categorized by their status. It retrieves the tasks from the taskStore and filters them based on their status. It also includes functionality to edit and delete tasks by passing the appropriate handlers to the Tasks component.
+
+8.The Tasks component represents an individual task. It displays the task's title and description. It provides buttons to edit and delete the task. When the user clicks the edit button, the component enters edit mode, allowing the user to update the task's details. The updated task is then saved using the editTask action.
+
+9.The application utilizes MobX's observer function to observe changes in the taskStore and automatically update the components when the store's state changes.
+
+10.The application also utilizes Chakra UI for styling and provides a responsive and visually appealing user interface.
+
+11.The application loads tasks from the browser's local storage when the Home page component mounts using the loadTasksFromLocalStorage action in the taskStore. It also stores the tasks to local storage whenever there is a change using the storeTasksToLocalStorage action.
+
+12.Overall, the Task Manager application provides a user-friendly interface for managing tasks and utilizes MobX and local storage to ensure data persistence and a smooth user experience.
