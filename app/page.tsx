@@ -16,6 +16,8 @@ const Home = observer(() => {
     }),
   }));
 
+  console.log(1);
+
   const tasksLoadedFromLocalStorage = React.useRef(false);
 
   useEffect(() => {
@@ -34,9 +36,9 @@ const Home = observer(() => {
     <>
       <storeContext.Provider value={store}>
         <ChakraProvider>
-          <div className='bg-teal-50 h-screen'>
-            <div className='max-w-[1300px]  mx-auto py-10 px-5 lg:px-10'>
-              <h1 className='font-bold text-center text-3xl mb-10 uppercase text-teal-800'>
+          <div className="bg-teal-50 h-screen">
+            <div className="max-w-[1300px]  mx-auto py-10 px-5 lg:px-10">
+              <h1 className="font-bold text-center text-3xl mb-10 uppercase text-teal-800">
                 Task Management Application
               </h1>
               <div>
