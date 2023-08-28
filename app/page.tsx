@@ -16,7 +16,7 @@ const Home = observer(() => {
     }),
   }));
 
-  console.log(3);
+  console.log(4);
 
   const tasksLoadedFromLocalStorage = React.useRef(false);
 
